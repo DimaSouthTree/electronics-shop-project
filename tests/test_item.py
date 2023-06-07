@@ -14,3 +14,10 @@ test_2.apply_discount()
 def test_apply_discount():
     assert test_1.price == 10000
     assert test_2.price == 8000
+
+def test_name():
+    assert test_1.name == "Test_1"
+    assert test_2.name == "Test_2"
+
+    test_1.name = "Test_3"
+    assert test_1.name == "Test_3"
