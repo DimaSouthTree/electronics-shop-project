@@ -38,6 +38,7 @@ class Item:
 
     @classmethod
     def instantiate_from_csv(cls):
+        """инициализирует экземпляры класса `Item` данными из файла _src/items.csv_"""
         fail_items_handel = open('../src/items.csv', 'r')
         items_csv_reader = DictReader(fail_items_handel)
 
@@ -49,6 +50,7 @@ class Item:
 
     @staticmethod
     def string_to_number(str_int):
+        """статический метод, возвращающий число из числа-строки"""
         if "." in str_int:
             return int(str_int[0])
         else:
@@ -60,6 +62,7 @@ class Item:
 
     @name.setter
     def name(self, new_name):
+        """проверяет, что длина наименования товара не больше 10 симвовов"""
         if len(new_name) <= 10:
             self.__name = new_name
             return self.__name
