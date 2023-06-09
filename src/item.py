@@ -67,4 +67,5 @@ class Item:
             self.__name = new_name
             return self.__name
         else:
-            return print("Exception: Длина наименования товара превышает 10 символов.")
+            raise Exception: Длина наименования товара превышает 10 символов.
+            # print("Exception: Длина наименования товара превышает 10 символов.")
