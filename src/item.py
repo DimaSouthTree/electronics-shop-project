@@ -69,3 +69,9 @@ class Item:
         else:
             raise Exception('Длина наименования товара превышает 10 символов.')
             # print("Exception: Длина наименования товара превышает 10 символов.")
+
+    def __repr__(self):
+        return f'{self.__class__.__name__}' + f"('{self.__name}', {self.price}, {self.quantity})"
+
+    def __str__(self):
+        return f'{self.__name}'
